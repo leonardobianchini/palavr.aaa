@@ -3,9 +3,10 @@ import { APP_FILTER, APP_INTERCEPTOR } from '@nestjs/core';
 import { HttpExceptionFilter } from './commom/filters/http-exception-filter.filter';
 import { ResponseTransformInterceptor } from './core/http/response-transformer.interceptor';
 import { UserModule } from './user/user.module';
+import { WordsModule } from './word/words.module';
 
 @Module({
-  imports: [UserModule],
+  imports: [UserModule, WordsModule],
   controllers: [],
   providers: [
     {
